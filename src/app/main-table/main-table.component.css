@@ -1,0 +1,17 @@
+.pigTable{
+    
+    background-color: lightskyblue;
+    overflow-y: hidden;
+    height: 270px;
+    
+    
+}
+.pigStats{
+    background-color: lightskyblue;
+    width: 100%;
+
+}
+.stats{
+    background-color: lightcoral;
+    
+}

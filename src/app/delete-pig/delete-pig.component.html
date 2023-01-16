@@ -1,0 +1,26 @@
+<body>
+<h1>    Delete Pig Report</h1>
+<section class="deleteBox">
+<p>Reporting Person Name:  {{savedPig.data.personInfo.name}}</p>
+<p>Reporting Person Phone:  {{savedPig.data.personInfo.phone}}</p>
+<p>Pig ID:  {{selectedPig}}</p>
+<p>Pig Breed:  {{savedPig.data.pigInfo.breed}}</p>
+<p>Location:   {{savedPig.data.Location.name}}</p>
+<p>Time and Date:   {{savedPig.data.timeAndDate}}</p>
+<p>Extra Notes:   {{savedPig.data.extraNotes}}</p>
+<p>Status : {{savedPig.data.status}}</p>
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+    <h1>Enter the password to delete the report</h1>
+<input type="text" name ="password" ngModel placeholder="Enter Password"><br>
+<p [hidden]="isHidden"> password is incorrect, please try again</p>
+
+<section class="button">
+<button type="submit" >Delete</button>
+<section class="button2">
+<button (click)="backClicked()">Back</button>
+</section>
+</section>
+</form>
+</section>
+
+</body>

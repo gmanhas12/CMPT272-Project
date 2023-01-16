@@ -1,0 +1,34 @@
+<body>
+<h2 >   Pig Finder</h2>
+  <section class="editPigs">
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+  <h1>Edit Pig</h1>
+  Reporting Person Name:  <input type="text" name = "pName" ngModel="{{returnedPig.data.personInfo.name}}" placeholder="Enter your Name"><br>
+  Reporting Person Phone:  <input type="text" name = "pPhone" ngModel="{{returnedPig.data.personInfo.phone}}" placeholder="Enter your Phone Number"><br>
+  Pig ID:   <input type="text" name = "pigId" ngModel="{{returnedPig.data.pigInfo.pid}}" placeholder="Enter the pig's id"><br>
+  Pig Breed:  <input type="text" name = "pigBreed" ngModel="{{returnedPig.data.pigInfo.breed}}" placeholder="Enter the pig breed"><br>
+  Location:  <input type="text" name = "place" ngModel="{{returnedPig.data.Location.name}}" placeholder="Enter the location name"><br>
+  <p>Time and Date:   {{returnedPig.data.timeAndDate}}</p><br>
+  Extra Notes:  <input type="text" name = "extraNotes" ngModel="{{returnedPig.data.extraNotes}}" placeholder="Extra Notes"><br>
+  Status :     
+<form [formGroup]="statusForm" (ngSubmit)="update()">
+   <p>
+    <select formControlName="status">
+      <option [ngValue]="null" disabled>{{returnedPig.data.status}}</option>
+      <!-- <option *ngFor="let s of statusEnum" [ngValue]="s.id">{{s.name}}</option> -->
+      <option *ngFor="let s of statusArray" [ngValue]="s">{{s}}</option>
+    </select>
+  </p>
+  </form>
+
+<input  class="inputContainer"type="text" name = "password" ngModel placeholder="Enter password"><br>
+<h4 [hidden]="isHidden"> password incorrect</h4>
+<section class="button">
+<button type="update">Update Data</button>
+<section class="button2">
+<button (click)="backClicked()">Cancel</button>
+</section>
+</section>
+</form>
+</section>
+</body>

@@ -1,0 +1,34 @@
+
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+<input type="text" name = "pName" ngModel placeholder="name"><br>
+<input type="text" name = "pPhone" ngModel placeholder=" phone"><br>
+<input type="text" name = "pigBreed" ngModel placeholder="pig breed"><br>
+<input type="text" name = "pigId" ngModel placeholder="pig id"><br>
+<input type="text" name = "extraNote" ngModel placeholder="extra notes"><br>
+<input type="hidden" name = "status" ngModel placeholder="status" visibility="hidden"><br>
+<form  [formGroup]="locationForm "(ngSubmit)="submit()">
+    <p>
+        Location: 
+      <select formControlName="sus">
+        <option [ngValue]="12" disabled>Select Location</option>
+        <option *ngFor="let l of locationNameArray" [ngValue]="l" >{{l}}</option>
+        <option  [ngValue]="99" >Enter a new location</option>
+      </select>
+    </p>
+    </form>
+<form  [formGroup]="statusForm "(ngSubmit)="submit()">
+    <p>
+        Status: 
+      <select formControlName="status">
+        <option [ngValue]="12" disabled>Select Status</option>
+        <option *ngFor="let l of statusArray" [ngValue]="l" >{{l}}</option>
+      </select>
+    </p>
+    </form>
+<input [type]="isHidden" name = "locationName" ngModel  placeholder="name" ><br>
+<input [type]="isHidden" name = "locationLat"  ngModel  placeholder="latitude" ><br>
+<input [type]="isHidden" name = "locationLong" ngModel  placeholder="longitude"><br>
+
+<button type="submit">Submit Data</button>
+<button (click)="backClicked()">Back</button>
+

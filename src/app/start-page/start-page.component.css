@@ -1,0 +1,24 @@
+body{
+    width: 100%;
+    background-color: lightskyblue;
+}
+
+.mapSec{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 45%;
+    width: 100%;
+}
+.pigSec{
+    background-color: aliceblue;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.newButton{
+    width: 90%;
+    height: 50px;
+}

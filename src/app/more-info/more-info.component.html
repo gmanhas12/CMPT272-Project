@@ -1,0 +1,19 @@
+<body>
+<h1>More Info</h1>
+
+ <section class="deleteBox">
+<p>Reporting Person Name:  {{savedPig.data.personInfo.name}}</p>
+<p>Reporting Person Phone:  {{savedPig.data.personInfo.phone}}</p>
+<p>Pig ID:  {{selectedPig}}</p>
+<p>Pig Breed:  {{savedPig.data.pigInfo.breed}}</p>
+<p>Location:   {{savedPig.data.Location.name}}</p>
+<p>Time and Date:   {{savedPig.data.timeAndDate}}</p>
+<p>Extra Notes:   {{savedPig.data.extraNotes}}</p>
+<p>Status : {{savedPig.data.status}}</p>
+
+<section class="button">
+<button (click)="backClicked()">Back</button>
+</section>
+</section>
+
+</body>

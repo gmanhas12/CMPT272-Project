@@ -1,0 +1,27 @@
+
+body{
+    width: 100%;
+    background-color: lightskyblue;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+.editPigs{
+    font-size: 20px;
+    text-decoration: underline;
+    margin-left: 30px;
+}
+
+.button{
+
+    display: flex;
+    width: auto;
+
+}
+
+.button2{
+    margin-left: 46px;
+    display: flex;
+    width: auto;
+
+}

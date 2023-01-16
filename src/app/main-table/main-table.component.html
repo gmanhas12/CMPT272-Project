@@ -1,0 +1,22 @@
+<section class="pigTable">
+<table class="pigStats">
+    <tr>
+      <th (click)="sortByLocation()">Location</th>
+      <th (click) ="sortByReported()">Reported By</th>
+      <th (click) ="sortByTime()">Time Reported</th>
+      <th (click) ="sortByStatus()">Status</th>
+      <th>MoreInfo</th>
+      <th>Edit Pig</th>
+      <th>Delete Pig</th>
+    </tr>
+    <tr *ngFor="let pig of response" class="stats">
+      <td>{{pig.data.Location.name}}</td>
+      <td>{{pig.data.personInfo.name}}</td>
+      <td>{{pig.data.timeAndDate}}</td>
+      <td>{{pig.data.status}}</td>
+      <td><button id={{pig.key}} (click)=" onClickMoreInfo($event)">MoreInfo</button></td>
+      <td><button id={{pig.key}} (click)="onClickEditPig($event)" >Edit Pig</button></td>
+      <td><button id={{pig.key}} (click)="onClickDelete($event)">Delete</button></td>
+    </tr>
+  </table>
+</section>
